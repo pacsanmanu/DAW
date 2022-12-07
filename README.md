@@ -96,4 +96,4 @@ The .gitignore file on our repository declares rules to avoid files we dont want
 
 - A line starting with # serves as a comment.
 
-- Pelopolla
+- Pelopolla2
