@@ -92,7 +92,7 @@ The .gitignore file on our repository declares rules to avoid files we dont want
 
 ### Rules on my .gitignore file
 
-> Ignore .class files:
+> Ignore .class files:<br>
 > *.class
 
 > Ignore .txt files:
