@@ -90,10 +90,10 @@ For gif images, we use the same, but the image on the url must be a gif.
 
 The .gitignore file on our repository declares rules to avoid files we dont want to save. It is normally ubicated on the root directory of our repository.
 
-### Pattern format
+### Rules on my .gitignore file
 
-- A blank line matches no files, so it can serve as a separator for readability.
+> Ignore .class files:
+> *.class
 
-- A line starting with # serves as a comment.
-
-- 
+> Ignore .txt files:
+> *.txt
