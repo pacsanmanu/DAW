@@ -79,8 +79,11 @@ ___
 
 We can add images to .md files
 We insert an image with !,(),[] without the commas. Inside the brackets, we put the "alt", it is the text that replaces the image if the image cant be found, and inside the parenthesis, we put the url or route of the image.
+
 ![github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+
 For gif images, we use the same, but the image on the url must be a gif.
+
 ![github-img](https://media3.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e472xzyy4v4vcs8o20vnkzcusw43jdmgmetce95yejc&rid=giphy.gif&ct=g)
 
 ---
