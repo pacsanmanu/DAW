@@ -95,5 +95,5 @@ The .gitignore file on our repository declares rules to avoid files we dont want
 > Ignore .class files:<br>
 > *.class
 
-> Ignore .txt files:
+> Ignore .txt files:<br>
 > *.txt
