@@ -78,13 +78,14 @@ For example, here:
 ___
 
 We can add images to .md files
-We insert an image with !,(),[] without the commas. Inside the brackets, we put the "alt", it is the text that replaces the image if the image cant be found, and inside the parenthesis, we put the url or route of the image.
+We insert an image with !,(),[] without the commas. Inside the brackets, we put the "alt", it is the text that replaces the image if the image cant be found, and inside the parenthesis, we put the url or route of the image. We can also add them with html img tag, which gives us the advantage of modifying the size of our imgs.
 
-![github](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github" height="200px">
 
 For gif images, we use the same, but the image on the url must be a gif.
 
-![github-img](https://media3.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e472xzyy4v4vcs8o20vnkzcusw43jdmgmetce95yejc&rid=giphy.gif&ct=g)
+<img src="https://media3.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e472xzyy4v4vcs8o20vnkzcusw43jdmgmetce95yejc&rid=giphy.gif&ct=g" alt="github-gif" height="200px">
+
 
 ---
 
