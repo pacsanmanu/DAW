@@ -97,3 +97,33 @@ The .gitignore file on our repository declares rules to avoid files we dont want
 
 > Ignore .txt files:<br>
 > *.txt
+
+---
+
+### Git
+##### This part will be in Spanish for my mental health.
+
+Git es un software de control de versiones diseñado pensando en la eficiencia, confiabilidad y compatibilidad del mantenimiento de sus versiones de aplicaciones cuando estas tienen un gran número de archivos de código fuente.
+
+Su propósito es llevar registro de los cambios en archivos de PC incluyendo coordinar el trabajo que varias personas realizan sobre archivos compartidos en un repositorio de código.
+
+Previamente a Git, se utilizaba SVN para el control de versiones. Git hace su función de una manera mucho más óptima, ya que SVN, para guardar estas versiones, guardaba los archivos antes de realizar los cambios en su totalidad, mientras que Git solo registra los cambios realizados.
+
+---
+
+### Comandos de Git
+
+**init** - iniciar un repositorio
+**branch** - crear rama dentro del repositorio
+**merge** - une los cambios de una rama sobre otra
+**status** - muestra en que rama nos encontramos trabajando
+**stash** - mover de una rama a otra
+
+
+
+**fetch** - comprueba los cambios entre local y servidor
+**pull** - descarga los cambios en el servidor sobre tu local
+**commit** - registra los cambios en el equipo local
+**push** - actualiza los cambios hechos en local al servidor
+
+---
