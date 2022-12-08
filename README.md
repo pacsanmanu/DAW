@@ -1,5 +1,5 @@
 # DAW
-Repository to save things while I study Web Applications Developing.
+Repository to save things while I study Web Applications Developing. I will make this file in english to improve my technical vocabulary.
 
 ---
 
@@ -114,16 +114,23 @@ Previamente a Git, se utilizaba SVN para el control de versiones. Git hace su fu
 ### Comandos de Git
 
 **init** - iniciar un repositorio
+
 **branch** - crear rama dentro del repositorio
+
 **merge** - une los cambios de una rama sobre otra
+
 **status** - muestra en que rama nos encontramos trabajando
+
 **stash** - mover de una rama a otra
 
 
 
 **fetch** - comprueba los cambios entre local y servidor
+
 **pull** - descarga los cambios en el servidor sobre tu local
+
 **commit** - registra los cambios en el equipo local
+
 **push** - actualiza los cambios hechos en local al servidor
 
 ---
