@@ -1,5 +1,5 @@
 # DAW
-Repository to save things while I study Web Applications Developing.
+Repository to save things while I study Web Applications Developing. I will make this file in english to improve my technical vocabulary.
 
 ---
 
