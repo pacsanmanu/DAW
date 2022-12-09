@@ -99,6 +99,14 @@ The .gitignore file on our repository declares rules to avoid files we dont want
 > Ignore .txt files:<br>
 > *.txt
 
+### Gitignore patterns
+
+> To ignore a type of files, we use "*.typeOfFile"
+
+> To ignore a certain file, we use the relative path of the file from the repository root. For example: "public/app/template.js"
+
+> To ignore a whole directory, we use "directoryToIgnore/"
+
 ---
 
 ### Git
