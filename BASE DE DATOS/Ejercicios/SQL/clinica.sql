@@ -1,0 +1,59 @@
+/* 
+   Manuel Pacheco Sánchez
+   1º DAW
+ */
+
+CREATE DATABASE IF NOT EXISTS clinica;
+
+USE clinica;
+
+DROP TABLE IF EXISTS DOCTOR;
+
+CREATE TABLE DOCTOR (
+    Codigo char(6) PRIMARY KEY,
+    Nombre varchar(25) NOT NULL,
+    Especialidad varchar(25)
+    );
+
+DROP TABLE IF EXISTS UNIDAD;
+
+CREATE TABLE UNIDAD (
+    Id char(8) PRIMARY KEY,
+    Nombre varchar(25) NOT NULL,
+    Planta char(2) NOT NULL,
+    Codigo char(6) NOT NULL,
+    CONSTRAINT FK_1 FOREIGN KEY (Codigo) REFERENCES DOCTOR (Codigo)
+    );
+
+DROP TABLE IF EXISTS PACIENTE;
+
+CREATE TABLE PACIENTE(
+    SS char(10) PRIMARY KEY,
+    Nombre varchar(20) NOT NULL,
+    Edad char(2) NOT NULL
+    );
+
+DROP TABLE IF EXISTS INGRESADO;
+
+CREATE TABLE INGRESADO(
+    SS char(10) NOT NULL,
+    Id char(8) NOT NULL,
+    Fecha date NOT NULL,
+	CONSTRAINT PK_1 PRIMARY KEY (SS, Id),
+    CONSTRAINT FK_2 FOREIGN KEY (SS) REFERENCES PACIENTE (SS),
+    CONSTRAINT FK_3 FOREIGN KEY (Id) REFERENCES UNIDAD (ID)
+    );
+
+DROP TABLE IF EXISTS ATIENDE;
+
+CREATE TABLE ATIENDE(
+    SS char(10) NOT NULL,
+    Codigo char(6) NOT NULL,
+    Sintoma varchar(30) NOT NULL,
+    Trat varchar(50),
+    Fecha date NOT NULL,
+	CONSTRAINT PK_2 PRIMARY KEY (SS, Codigo),
+    CONSTRAINT FK_4 FOREIGN KEY (SS) REFERENCES PACIENTE (SS),
+    CONSTRAINT FK_5 FOREIGN KEY (Codigo) REFERENCES DOCTOR (Codigo)
+    );
+

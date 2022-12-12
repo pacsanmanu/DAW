@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bibliotecas>
+
+    <biblioteca ciudad = "Sevilla">
+        <libro>
+            <titulo>Joaquin Sanchez mamona</titulo>
+            <autor>Loperita</titulo>
+            <paginas>1</titulo>
+        </libro>
+        <libro>
+            <titulo>Sevilla FC Gloria d la capital</titulo>
+            <autor>Ciudad de Sevilla</autor>
+            <paginas>600</autor>
+        </libro>
+    </biblioteca>
+
+    <biblioteca ciudad = "Malaga">
+        <libro>
+            <titulo>Ciudad de mierda</titulo>
+            <autor>Andalucia</titulo>
+            <paginas>1</titulo>
+        </libro>
+        <libro>
+            <titulo>Envidia a Sevilla</titulo>
+            <autor>Malaga</autor>
+            <paginas>600</autor>
+        </libro>
+    </biblioteca>
+
+    <biblioteca ciudad = "Granada">
+        <libro>
+            <titulo>Wena ciudad</titulo>
+            <autor>Andalucia</titulo>
+            <paginas>5</titulo>
+        </libro>
+        <libro>
+            <titulo>Bonita pero no es Sevilla</titulo>
+            <autor>AAAAA</autor>
+            <paginas>2</autor>
+        </libro>
+    </biblioteca>
+
+</bibliotecas>

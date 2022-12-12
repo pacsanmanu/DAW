@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<agenda>
+
+    <contacto>
+
+        <nombre>Francisco</nombre>
+        <apellidos>Gómez Govantes</apellidos>
+        <direccion>Calle Ave del Paraíso Nº7</direccion>
+        <numero-telefono>661423885</numero-telefono>
+    
+    </contacto>
+
+        
+    <contacto>
+
+        <nombre>Javier</nombre>
+        <apellidos>Díaz Fernández</apellidos>
+        <direccion>Calle Cueva de Menga Nº3</direccion>
+        <numero-telefono>668122235</numero-telefono>
+    
+    </contacto>
+
+
+    <contacto>
+
+        <nombre>Gonzalo</nombre>
+        <apellidos>Sanz Domínguez</apellidos>
+        <direccion>Calle Cortijo de la Albarrana Nº22</direccion>
+        <numero-telefono>660221328</numero-telefono>
+    
+    </contacto>
+
+
+    <contacto>
+
+        <nombre>Manuel</nombre>
+        <apellidos>Moreno Morilla</apellidos>
+        <direccion>Calle Sierpes Nº 2</direccion>
+        <numero-telefono>688172653</numero-telefono>
+    
+    </contacto>
+
+
+    <contacto>
+
+        <nombre>David</nombre>
+        <apellidos>Álvarez Alonso</apellidos>
+        <direccion>Calle Feria Nº 6</direccion>
+        <numero-telefono>681727461</numero-telefono>
+    
+    </contacto>
+
+</agenda>
