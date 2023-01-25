@@ -3,8 +3,7 @@ import Ej11.Clases.*;
 
 public class Main {
     public static void main(String[] args) {
-        int prueba = 29533049;
-        DNI dni = new DNI(prueba);
+        DNI dni = new DNI(31021037);
         System.out.println(dni);
     }
 }

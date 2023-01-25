@@ -1,4 +1,4 @@
-import java.lang.annotation.Target;
+package Leetcode;
 
 public class Ej35 {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package Leetcode;
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int[] chosen = new int[2];
