@@ -37,6 +37,6 @@ public class Superheroe {
 
     @Override
     public String toString(){
-        return this.nombre + "\n" + this.descripcion + "\n" + this.capa;
+        return "[" + this.nombre + ", " + this.descripcion + ", " + this.capa + "]";
     }
 }

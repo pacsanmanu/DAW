@@ -20,8 +20,34 @@ public class Dimension {
     public void setAncho(double ancho){
         this.ancho = ancho;
     }
-
+    
     public double getAncho(){
         return this.ancho;
     }
+
+    public double getAlto(){
+        return this.alto;
+    }
+
+    public void setAlto(double alto){
+        this.alto = alto;
+    }
+
+    public double getProfundidad(){
+        return this.profundidad;
+    }
+
+    public void setProfundidad(double profundidad){
+        this.profundidad = profundidad;
+    }
+
+    public double getVolumen(){
+        return this.alto * this.ancho * this.profundidad;
+    }
+
+    @Override
+    public String toString(){
+        return "[" + this.ancho + ", " + this.alto + ", " + this.profundidad + "]";
+    }
+
 }
