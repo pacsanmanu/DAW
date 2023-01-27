@@ -1,0 +1,28 @@
+#contenedor{
+    width: 80%;
+    max-width: 950px;
+}
+#cabecera{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+#menu{
+    display: inline;
+    margin-bottom: 2em;
+}
+#menu li{
+    display: inline;
+}
+#menu a:hover{
+    color: black;
+}
+#contenido{
+    background-color: gray;
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+    color: white;
+}
+#contenido h2{
+    color: red;
+}
