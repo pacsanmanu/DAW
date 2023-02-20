@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 10</title>
+    <style>
+        @keyframes movimiento{
+            from{transform: translateX(0px);}
+            to{transform: translateX(100%);}
+        }
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .fondo{
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            background-image: url("https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg?w=1380&t=st=1675360436~exp=1675361036~hmac=614e7dd885d0cb3eaafd3637d9f0406e0f7ee126eb8337cbe9e8cdb1f783b35b");
+        }
+        .fondo p{
+            animation: movimiento 7s infinite alternate;
+            font-size: 36px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="fondo"><p>Hola, buenos dias.</p></div>
+</body>
+</html>
