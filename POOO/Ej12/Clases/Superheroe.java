@@ -37,6 +37,13 @@ public class Superheroe {
 
     @Override
     public String toString(){
-        return "[" + this.nombre + ", " + this.descripcion + ", " + this.capa + "]";
+        String aux = "";
+        aux += "[" + this.nombre + ", " + this.descripcion + ", ";
+        if(this.capa){
+            aux += "con capa]";
+        }else{
+            aux+= "sin capa]";
+        }
+        return aux;
     }
 }

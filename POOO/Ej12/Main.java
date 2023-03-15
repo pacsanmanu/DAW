@@ -15,11 +15,13 @@ public class Main {
         Figura pollon2 = new Figura("0123BB", 28.95, superman2, medida2);
         Figura pollon3 = new Figura("0123BC", 22.95, superman3, medida3);
         Figura pollon4 = new Figura("0123BD", 39.95, superman4, medida4);
+        superman4.setDescripcion("El auténtico bicho, depredador de tiesos");
         Coleccion Figuras = new Coleccion("Mi Coleccion");
         Figuras.añadirFigura(pollon);
         Figuras.añadirFigura(pollon2);
         Figuras.añadirFigura(pollon3);
         Figuras.añadirFigura(pollon4);
         System.out.println(Figuras.getValorColeccion());
+        System.out.println(Figuras.masValioso());
     }
 }
