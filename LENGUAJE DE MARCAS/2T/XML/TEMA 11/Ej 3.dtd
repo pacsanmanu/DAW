@@ -1,0 +1,8 @@
+<!ELEMENT clase (alumno)+>
+<!ELEMENT alumno (nombre, edad, altura, pelo, sexo, sexy?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT altura (#PCDATA)>
+<!ELEMENT pelo (#PCDATA)>
+<!ELEMENT sexo (#PCDATA)>
+<!ELEMENT sexy (#PCDATA)>

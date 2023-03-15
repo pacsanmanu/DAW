@@ -1,0 +1,40 @@
+clase{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+}
+
+alumno{
+    display: block;
+    padding: 20px;
+    background-color: skyblue;
+    border-color: black;
+    border-width: 2px;
+    border-style: dotted;
+}
+
+nombre{
+    font-weight: 800;
+}
+
+edad{
+    margin-left: 5%;
+}
+
+altura{
+    margin-left: 5%;
+}
+
+pelo{
+    margin-left: 5%;
+}
+
+sexo{
+    margin-left: 5%;
+}
+
+sexy{
+    margin-left: 5%;
+}
+

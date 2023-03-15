@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone = "no" ?>
+<?xml-stylesheet type="text/css" href="estilos_6.css" ?>
+<!DOCTYPE clase SYSTEM "clase.dtd">
+<clase>
+    <alumno numeroClase="1">
+        <nombre>Manuel</nombre>
+        <edad>23</edad>
+        <altura>1,75</altura>
+        <pelo>Negro</pelo>
+        <sexo>Hombre</sexo>
+        <sexy>Si</sexy>
+    </alumno>
+    <alumno numeroClase="2">
+        <nombre>Jose Augusto</nombre>
+        <edad>24</edad>
+        <altura>1,77</altura>
+        <pelo>Marron</pelo>
+        <sexo>Hombre</sexo>
+        <sexy>Si</sexy>
+    </alumno>
+    <alumno numeroClase="3">
+        <nombre>Raul</nombre>
+        <edad>19</edad>
+        <altura>1,87</altura>
+        <pelo>Marron</pelo>
+        <sexo>Hombre</sexo>
+    </alumno>
+    <alumno numeroClase="4">
+        <nombre>Daniel</nombre>
+        <edad>23</edad>
+        <altura>1,80</altura>
+        <pelo>Negro</pelo>
+        <sexo>Hombre</sexo>
+        <sexy>No</sexy>
+    </alumno>
+    <alumno numeroClase="5">
+        <nombre>Oksana</nombre>
+        <edad>20</edad>
+        <altura>1,75</altura>
+        <pelo>Rubio</pelo>
+        <sexo>Mujer</sexo>
+        <!-- Aquí no se pone sexy, se deja trabajar a mi colega -->
+    </alumno>
+    <alumno numeroClase="6">
+        <nombre>Juan Tornay</nombre>
+        <edad>19</edad>
+        <altura>1,85</altura>
+        <pelo>Rubio</pelo>
+        <sexo>Hombre</sexo>
+        <sexy>No</sexy>
+    </alumno>
+</clase>

@@ -1,0 +1,68 @@
+ies{
+    width: 31%;
+    margin: auto;
+}
+
+web{
+    display: none;
+}
+
+nombreCentro{
+    width: 100%;
+    background-color: lightgray;
+    font-size: 20px;
+    padding-left: 195px;
+    padding-right: 181px;
+}
+
+ciclos{
+    display: block;
+    width: 100%;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+ciclo{
+    width: 100%;
+    display: block;
+    padding: 15px;
+}
+
+nombre{
+    width: 60%;
+    padding: 5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+grado{
+    padding: 5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+decretoTitulo{
+    padding: 5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#DAM nombre{
+    padding-right: 35px;
+}
+
+#DAW nombre{
+    padding-right: 112px;
+}
+
+#SMR nombre{
+    padding-right: 82px;
+}
+
+#SMR grado{
+    padding-right: 20px;
+}
