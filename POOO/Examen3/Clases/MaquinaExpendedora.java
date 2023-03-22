@@ -20,12 +20,12 @@ public class MaquinaExpendedora {
     public void Start(){
         int eleccion = -1;
         do{
-            Menu();
+            eleccion = Menu();
         }while(eleccion != 0);
         System.out.println("¡Gracias por su compra!");
     }
 
-    public void Menu(){
+    public int Menu(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Menú de la máquina expendedora\n");
         System.out.println("1. Ver artículos");
@@ -47,6 +47,7 @@ public class MaquinaExpendedora {
         }else if(eleccion == 5){
             comprobarArticulos();
         }
+        return eleccion;
     }
 
     public void verArticulos(){
