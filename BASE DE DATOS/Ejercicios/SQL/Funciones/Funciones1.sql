@@ -211,3 +211,53 @@ BEGIN
     RETURN precioMinimo;
 END $$
 DELIMITER ;
+
+
+/* 1. Escribe una FUNCIÓN que reciba un número entero de entrada y devuelva TRUE si el número es par o FALSE en caso contrario. */
+
+DROP FUNCTION IF EXISTS numeroPar;
+DELIMETER $$
+CREATE FUNCTION numeroPar(numero INT)
+RETURNS BOOLEAN
+BEGIN
+    IF numero % 2 = 0 THEN
+        RETURN TRUE;
+    ELSE
+        RETURN FALSE;
+    END IF;
+END $$
+DELIMITER ;
+
+/* 2. Haz una funcion que devuelva la distancia entre 2 puntos */
+
+DROP FUNCTION IF EXISTS distanciaEntrePuntos;
+DELIMITER $$
+CREATE FUNCTION distanciaEntrePuntos(x1 INT, y1 INT, x2 INT, y2 INT)
+RETURNS DOUBLE
+BEGIN
+    DECLARE distancia DOUBLE;
+    /* Calculamos la distancia como la raiz cuadrada de ((x2-x1)^2 + (y2-y1)^2). */
+    SET distancia = SQRT(POWER((x2-x1), 2) + POWER((y2-y1), 2));
+    /* SQRT hace referencia a la raiz cuadrada, y POWER(numero, 2) a la potencia a la que elevamos el número que obtenemos */
+    RETURN distancia;
+END $$
+DELIMITER ;
+
+/* Funcion que devuelva según un numero el dia de la semana que le corresponde */
+
+CREATE FUNCTION DiaSemana(numero INT)
+RETURNS VARCHAR(10)
+BEGIN
+    DECLARE nombreDia VARCHAR(10);
+    SET nombreDia = CASE numero
+        WHEN 1 THEN 'Lunes'
+        WHEN 2 THEN 'Martes'
+        WHEN 3 THEN 'Miércoles'
+        WHEN 4 THEN 'Jueves'
+        WHEN 5 THEN 'Viernes'
+        WHEN 6 THEN 'Sábado'
+        WHEN 7 THEN 'Domingo'
+        ELSE 'No existe tal día'
+    END;
+    RETURN nombreDia;
+END;
