@@ -261,3 +261,29 @@ BEGIN
     END;
     RETURN nombreDia;
 END;
+
+/* Funcion que devuelva el mayor de 3 numeros */
+
+DROP FUNCTION IF EXISTS numeroMayor;
+DELIMITER $$
+CREATE FUNCTION mayorDeTres(num1 DOUBLE, num2 DOUBLE, num3 DOUBLE)
+RETURNS DOUBLE
+BEGIN
+    DECLARE mayor DOUBLE;
+    SET mayor = GREATEST(num1, num2, num3);
+    RETURN mayor;
+END $$
+DELIMITER ;
+
+/* Funcion que devuelva el area de un circulo */
+
+DROP FUNCTION IF EXISTS areaCirculo;
+DELIMITER $$
+CREATE FUNCTION areaCirculo(radio DOUBLE)
+RETURNS DOUBLE
+BEGIN
+    DECLARE area DOUBLE;
+    SET area = PI() * POWER(radio, 2);
+    RETURN area;
+END $$
+DELIMITER ;
