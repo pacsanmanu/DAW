@@ -7,7 +7,9 @@ function danceConvert(pin) {
     digits.every((digit, index) => {
         acumulator = parseInt(digit) + index;
         if(acumulator > 9){
-            acumulator -= 10;
+            while(acumulator > 9){
+                acumulator -= 10;
+            }
             dance.push(moves[acumulator]);
         }else{   
             dance.push(moves[acumulator]);
