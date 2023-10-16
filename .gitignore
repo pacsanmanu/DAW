@@ -1,3 +1,4 @@
 # Avoid java .class files
 *.class
 *.txt
+**/node_modules/
