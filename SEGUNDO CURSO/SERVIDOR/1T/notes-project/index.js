@@ -83,38 +83,46 @@ function listNotes() {
     }
 }
 
-function start() {
-    console.log('Welcome to your notebook. You can:');
-    console.log('1. Create note');
-    console.log('2. Edit note');
-    console.log('3. Remove note');
-    console.log('4. List notes');
-    console.log('5. Exit\n');
+function menu(option){
+    switch (option) {
+        case '1':
+            createNote();
+            break;
+        case '2':
+            editNote();
+            break;
+        case '3':
+            removeNote();
+            break;
+        case '4':
+            listNotes();
+            menu();
+            break;
+        case '5':
+            rl.close();
+            break;
+        default:
+            break;
+    }
+}
 
-    rl.question('What do you want to do today?: ', (choice) => {
-        switch (choice) {
-            case '1':
-                createNote();
-                break;
-            case '2':
-                editNote();
-                break;
-            case '3':
-                removeNote();
-                break;
-            case '4':
-                listNotes();
-                start();
-                break;
-            case '5':
-                rl.close();
-                break;
-            default:
-                console.log('Invalid choice. Please choose a valid option (1, 2, 3, 4, or 5).');
-                start();
-                break;
-        }
-    });
+function start(option) {
+    option = process.argv[2];
+    if(option){
+        menu(option);
+    }else{
+        console.log('Welcome to your notebook. You can:');
+        console.log('1. Create note');
+        console.log('2. Edit note');
+        console.log('3. Remove note');
+        console.log('4. List notes');
+        console.log('5. Exit\n');
+
+        rl.question('What do you want to do today?: ', (choice) => {
+            menu(choice);
+        });
+    }
+    
 }
 
 start();
