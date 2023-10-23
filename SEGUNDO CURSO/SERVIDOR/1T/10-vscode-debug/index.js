@@ -1,3 +1,3 @@
-import { app } from "./app.js";
+import { createXmasTree } from "./app.js";
 
-app();
+console.log(createXmasTree(25));
