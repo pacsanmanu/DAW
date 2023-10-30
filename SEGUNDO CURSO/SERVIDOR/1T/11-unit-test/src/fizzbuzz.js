@@ -1,6 +1,11 @@
-export function fizzbuzz(num){
+export function fizzbuzz(num, conditions = {}) {
     let text = "";
-    if(num % 3 === 0) text += "fizz";
-    if(num % 5 === 0) text += "buzz";
+
+    for (const divisor of Object.keys(conditions)) {
+        if (num % divisor === 0) {
+            text += conditions[divisor];
+        }
+    }
+
     return text || num;
 }
