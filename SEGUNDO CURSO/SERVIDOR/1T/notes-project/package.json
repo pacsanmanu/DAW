@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "nodemon": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "notes:create": "node index.js 1",
     "notes:edit": "node index.js 2",
@@ -12,5 +13,11 @@
     "notes:list": "node index.js 4"
   },
   "author": "pacsanmanu (github.com/pacsanmanu)",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "nodemon": "^3.0.1"
+  }
 }
