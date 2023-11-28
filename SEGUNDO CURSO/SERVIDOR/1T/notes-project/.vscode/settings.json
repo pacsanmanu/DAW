@@ -12,7 +12,7 @@
 	"editor.fontLigatures": true,
 	"editor.fontFamily": "Jetbrains Mono",
 	"workbench.productIconTheme": "fluent-icons",
-	"window.zoomLevel": 2,
+	"window.zoomLevel": 1,
 	"explorer.confirmDragAndDrop": false,
 	"github.copilot.enable": {
 			"*": false,
@@ -25,7 +25,7 @@
 	"editor.insertSpaces": false,
 	"editor.tabSize": 2,
 	"editor.codeActionsOnSave": {
-			"source.fixAll": true
+		"source.fixAll": "explicit"
 	},
 	"terminal.integrated.tabs.title": "${workspaceFolder}",
 	"editor.dragAndDrop": false
