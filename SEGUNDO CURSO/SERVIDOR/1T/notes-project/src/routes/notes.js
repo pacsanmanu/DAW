@@ -1,7 +1,10 @@
 import express from 'express';
 import * as notes from '../controllers/notes-controller.js';
+import { validateToken } from '../middlewares/auth-middleware.js';
 
 const router = express.Router();
+
+router.use(validateToken);
 
 router.get('', notes.listNotes);
 router.get('/:noteName', notes.listNote);
