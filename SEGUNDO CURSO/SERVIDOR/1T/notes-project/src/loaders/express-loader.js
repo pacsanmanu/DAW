@@ -3,6 +3,8 @@ import router from '../routes/index.js';
 import { printDateMiddleware } from "../middlewares/misc-middleware.js";
 import { errorMiddleware } from "../middlewares/error-middleware.js";
 import { morganMiddleware } from "../config/morgan.js";
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from '../documentation/swagger.json' assert { type: 'json' };
 
 export default function (server){
 	// CONFIG
@@ -13,6 +15,7 @@ export default function (server){
 	server.use(printDateMiddleware);
 	// RUTAS
 	server.use(router);
+	server.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 	// ERRORS
 	server.use(errorMiddleware);
 }

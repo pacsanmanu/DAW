@@ -12,5 +12,6 @@ router.post('', notes.createNote);
 router.patch('/:noteName', notes.editNote);
 router.patch('/:noteName/name', notes.editNoteName);
 router.delete('/:noteName', notes.deleteNote);
+router.post('/upload', notes.uploadNote)
 
 export default router;
