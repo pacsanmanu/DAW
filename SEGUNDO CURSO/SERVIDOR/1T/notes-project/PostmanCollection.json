@@ -1,29 +1,28 @@
 {
 	"info": {
-		"_postman_id": "8e3faa66-2f7a-437b-9be3-4e355e242abc",
+		"_postman_id": "a9fe06fc-9df4-4ab3-88f4-3b8c91d0be9a",
 		"name": "Notes",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30027420"
+		"_exporter_id": "31868250"
 	},
 	"item": [
 		{
 			"name": "CREATE NOTE",
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{bearer-token}}",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"bocadillo\",\n    \"content\": \"this is my first note\"\n}",
+					"raw": "{\n    \"title\": \"bocadillete\",\n    \"content\": \"this is my first note\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -46,17 +45,16 @@
 			"name": "GET ALL NOTES",
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{bearer-token}}",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "{{baseUrl}}/notes?sort=noteName&page=1",
 					"host": [
@@ -83,25 +81,24 @@
 			"name": "GET ONE NOTE",
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{bearer-token}}",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "{{baseUrl}}/notes/1",
+					"raw": "{{baseUrl}}/notes/bocadillete",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"notes",
-						"1"
+						"bocadillete"
 					]
 				}
 			},
@@ -111,17 +108,16 @@
 			"name": "UPDATE NOTE NAME",
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{bearer-token}}",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "PATCH",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"title\": \"FIRST\"\n}",
@@ -149,17 +145,16 @@
 			"name": "UPDATE NOTE CONTENT",
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{bearer-token}}",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "PATCH",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"content\": \"bocatita de xope porfaaa\"\n}",
@@ -186,17 +181,16 @@
 			"name": "DELETE NOTE",
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{bearer-token}}",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "",
@@ -207,13 +201,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/notes/1",
+					"raw": "{{baseUrl}}/notes/bocadillo",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"notes",
-						"1"
+						"bocadillo"
 					]
 				}
 			},
@@ -223,17 +217,16 @@
 			"name": "UPLOAD NOTE",
 			"request": {
 				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{bearer-token}}",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "formdata",
 					"formdata": [
@@ -252,6 +245,51 @@
 					"path": [
 						"notes",
 						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"if (jsonData.mensaje === \"Autenticación exitosa\" && jsonData.token) {",
+							"    pm.environment.set(\"token\", jsonData.token);",
+							"    console.log(\"Token almacenado: \" + jsonData.token);",
+							"} else {",
+							"    console.log(\"Autenticación fallida o token no presente en la respuesta.\");",
+							"}",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"usuario\": \"manu\",\n    \"contraseña\": \"holawenodia\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
 					]
 				}
 			},

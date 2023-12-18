@@ -43,6 +43,17 @@
                   "content"
               ]
           },
+          "Usuario": {
+            "type": "object",
+            "properties": {
+                "usuario": {
+                    "type": "string"
+                },
+                "contraseña": {
+                    "type": "string"
+                }
+            }
+        },
           "NoteNameInput": {
               "type": "object",
               "properties": {
@@ -57,6 +68,91 @@
       }
   },
   "paths": {
+    "/login": {
+        "post": {
+            "summary": "Get token to access the API",
+            "requestBody": {
+                "required": true,
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/Usuario"
+                        }
+                    }
+                }
+            },
+            "responses": {
+                "200": {
+                    "description": "Autenticacion exitosa",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "mensage": {
+                                        "type": "string"
+                                    },
+                                    "token": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "400": {
+                    "description": "Title and content are required",
+                    "content": {
+                      "application/json": {
+                          "schema": {
+                              "type": "object",
+                              "properties": {
+                                  "message": "Title and content are required"
+                              }
+                          }
+                      }
+                  }
+                },
+                "409": {
+                    "description": "Note already exists",
+                    "content": {
+                      "application/json": {
+                          "schema": {
+                              "type": "object",
+                              "properties": {
+                                  "message": "Note already exists"
+                              }
+                          }
+                      }
+                  }
+                },
+                "500": {
+                    "description": "Error creating the note",
+                    "content": {
+                      "application/json": {
+                          "schema": {
+                              "type": "object",
+                              "properties": {
+                                  "message": "Error creating the note"
+                              }
+                          }
+                      }
+                  }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "token",
+                    "in": "header",
+                    "required": true,
+                    "description": "Authentication token",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ]
+        }
+    },
       "/notes": {
           "get": {
               "summary": "Get all notes",
