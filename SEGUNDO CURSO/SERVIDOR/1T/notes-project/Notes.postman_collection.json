@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "8e3faa66-2f7a-437b-9be3-4e355e242abc",
+		"name": "Notes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30027420"
+	},
+	"item": [
+		{
+			"name": "CREATE NOTE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"bocadillo\",\n    \"content\": \"this is my first note\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/notes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL NOTES",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/notes?sort=noteName&page=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"notes"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "noteName"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ONE NOTE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/notes/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"notes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE NOTE NAME",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"FIRST\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/notes/1/name",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"notes",
+						"1",
+						"name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE NOTE CONTENT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"bocatita de xope porfaaa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/notes/mi_nota",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"notes",
+						"mi_nota"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE NOTE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/notes/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"notes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPLOAD NOTE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "note",
+							"type": "file",
+							"src": "/home/manuel/Escritorio/notiterito.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/notes/upload",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"notes",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
