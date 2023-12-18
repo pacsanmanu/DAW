@@ -4,7 +4,7 @@ import path from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const notesDirectory = path.join(__dirname, "");
+const notesDirectory = path.join(__dirname, "../../notes");
 
 export function listNotes(req, res) {
   const sort = req.query.sort;

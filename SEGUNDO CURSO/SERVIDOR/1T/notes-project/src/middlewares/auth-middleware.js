@@ -1,17 +1,16 @@
-import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 export const validateToken = (req, res, next) => {
-    const authorization = req.headers['authorization'];
-    const token = authorization.split(" ")[1];
-    
-    bcrypt.compare(process.env.AUTHTOKEN, token, (err, result) => {
-        if (err) {
-            return res.status(403).send('Acceso denegado');
-        }
-        if (result) {
-            next();
-        } else {
-            return res.status(403).send('Acceso denegado');
-        }
-    });
+    const token = req.headers['token'];
+    if (!token) {
+        return res.status(403).send('Token requerido.');
+    }
+
+    try {
+        const decoded = jwt.verify(token, 'welcomebaby');
+        req.usuario = decoded;
+    } catch (err) {
+        return res.status(401).send('Token inválido.');
+    }
+    next();
 };
