@@ -4,7 +4,7 @@ import { printDateMiddleware } from "../middlewares/misc-middleware.js";
 import { errorMiddleware } from "../middlewares/error-middleware.js";
 import { morganMiddleware } from "../config/morgan.js";
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from '../documentation/swagger.json' assert { type: 'json' };
+import swaggerDocument from '../../documentation/swagger.json' assert { type: 'json' };
 
 export default function (server){
 	// CONFIG

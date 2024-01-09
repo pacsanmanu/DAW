@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.3/socket.io.js"></script>
+	<script>
+
+		window.onload = init;
+
+		const socket = io();
+
+		socket.on('single', (data) => {
+			console.log(data);
+		});
+		
+		const createLi = (text) => {
+			const li = document.createElement('li');
+			li.innerText = text;
+			return li;
+		}
+
+		function init(){
+			const ul = document.getElementById('list');
+
+			socket.on('all', (data) => {
+				console.log(data);
+				ul.appendChild(createLi(data));
+			});
+
+			const dateText = document.getElementById('date');
+			const date = new Date();
+			dateText.innerText = date.toLocaleString();
+
+			socket.on('date', (data) => {
+				dateText.innerText = data;
+			});
+
+		}
+
+		function send(){
+			const input = document.getElementById('input');
+			socket.emit('echo', input.value);
+		}
+	</script>
+	<title>SocketIO</title>
+</head>
+<body>
+	<h1 id="date"></h1>
+	<button id="btn" onclick="send()">Click me!</button>
+	<input type="text" id="input">
+	<ul id="list"></ul>
+</body>
+</html>
