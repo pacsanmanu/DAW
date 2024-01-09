@@ -59,6 +59,3 @@ notes-project
    └─ sonar.js
 
 ```
-
-#### Reporte de tests
-
