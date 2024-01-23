@@ -1,8 +1,7 @@
 import express from 'express';
-import { login } from '../controllers/users-controller.js'
 
 const router = express.Router();
 
-router.use('/login', login)
+ // router.use('/login', login)   || Habilitar si se usa servicio de autenticacion
 
 export default router;
