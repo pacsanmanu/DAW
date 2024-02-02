@@ -1,0 +1,20 @@
+.imagen{
+	background-image: url("./images/img1.jpeg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100vh;
+}
+
+@media (max-width: 900px) {
+	.imagen{
+		background-image: url("./images/img2.jpg");
+	}
+}
+
+@media (max-width: 600px) {
+	.imagen{
+		background-image: url("./images/img3.png");
+	}
+}

@@ -1,0 +1,114 @@
+.contenedor-listas {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contenedor-listas > div {
+	flex: 1 1 25%; /* Cada lista ocupa 25% del ancho, permitiendo 4 listas por fila */
+	box-sizing: border-box;
+	padding: 10px; /* Espaciado entre las listas */
+}
+
+.lista-1 ul {
+	list-style-type: square;
+}
+
+.lista-2 ul {
+	list-style-type: circle;
+}
+
+.lista-3 ul {
+	list-style-type: disc;
+}
+
+.lista-4 ul {
+	list-style-type: decimal;
+}
+
+.lista-5 ul {
+	list-style-type: lower-roman;
+}
+
+.lista-6 ul {
+	list-style-type: upper-roman;
+}
+
+.lista-7 ul {
+	list-style-type: lower-alpha;
+}
+
+.lista-8 ul {
+	list-style-type: upper-alpha;
+}
+
+.lista-9 ul {
+	list-style-type: lower-greek;
+}
+
+.lista-10 ul {
+	list-style-type: cjk-earthly-branch; /* Marcadores con ramas terrestres del zodiaco chino */
+}
+
+.lista-11 ul {
+	list-style-type: cjk-heavenly-stem; /* Marcadores con tallos celestiales del zodiaco chino */
+}
+
+.lista-12 ul {
+	list-style-type: persian; /* Números chinos tradicionales, estilo informal */
+}
+
+.lista-13 ul {
+	list-style-type: armenian;
+}
+
+.lista-14 ul {
+	list-style-type: georgian;
+}
+
+.lista-15 ul {
+	list-style-type: decimal-leading-zero;
+}
+
+.lista-16 ul {
+	list-style-type: cjk-ideographic;
+}
+
+.lista-17 ul {
+	list-style-type: hebrew;
+}
+
+.lista-18 ul {
+	list-style-type: hiragana;
+}
+
+.lista-19 ul {
+	list-style-type: katakana;
+}
+
+.lista-20 ul {
+	list-style-type: katakana-iroha;
+}
+
+.lista-21 ul {
+	list-style-type: hiragana-iroha;
+}
+
+.lista-22 ul {
+	list-style-type: lower-armenian;
+}
+
+.lista-23 ul {
+	list-style-type: upper-armenian;
+}
+
+.lista-24 ul {
+	list-style-type: ethiopic-numeric;
+}
+
+.lista-25 ul {
+	list-style-type: thai;
+}
+
+.lista-26 ul {
+	list-style-type: mongolian;
+}
