@@ -18,7 +18,7 @@ const noteSchema = new Schema({
 		match: /^(?!\s*$).+/,
 	},
 	author: {
-		type: mongoose.Types.ObjectId
+		type: Schema.Types.ObjectId, ref: 'User'
 	}
 }, { timestamps: true });
 

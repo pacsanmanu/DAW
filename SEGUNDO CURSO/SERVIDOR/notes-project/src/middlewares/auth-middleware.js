@@ -1,16 +1,22 @@
 import jwt from 'jsonwebtoken';
+import config from '../config.js';
+import { HttpStatusError } from 'common-errors';
+import logger from '../utils/logger.js';
 
-export const validateToken = (req, res, next) => {
-    const token = req.headers['token'];
-    if (!token) {
-        return res.status(403).send('Token requerido.');
+export const checkToken = (req, res, next) => {
+    const {authorization} = req.headers;
+    if (!authorization) {
+        throw HttpStatusError(401, 'No token provided');
     }
 
+    const [_bearer, token] = authorization.split(' ');
+
     try {
-        const decoded = jwt.verify(token, 'welcomebaby');
-        req.usuario = decoded;
+        const tokenInfo = jwt.verify(token, config.app.secretKey);
+        req.user = tokenInfo;
     } catch (err) {
-        return res.status(401).send('Token inválido.');
+        logger.error(err.message);
+        throw HttpStatusError(401, 'Invalid token');
     }
     next();
 };

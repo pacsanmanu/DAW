@@ -14,4 +14,16 @@ const userSchema = new Schema({
 	}
 }, { timestamps: true });
 
+userSchema.set('toJSON', function (doc){
+	const {_id, __v, password, ...newDoc} = doc;
+	newDoc.id = _id;
+	return newDoc;
+})
+
+userSchema.post('find', function (results) {
+	results.forEach(doc => {
+		delete doc.password;
+	});
+});
+
 export default model('User', userSchema);

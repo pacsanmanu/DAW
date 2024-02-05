@@ -1,8 +1,11 @@
 import { Router } from 'express';
-import {getUsersController, createUserController} from '../controllers/users-controller.js';
+import {getUsersController, createUserController, deleteUserController ,getUserMe} from '../controllers/users-controller.js';
+import { checkToken } from '../middlewares/auth-middleware.js';
 
 const router = Router();
-router.get('/', getUsersController);
+router.get('/', checkToken, getUsersController);
+router.get('/me', checkToken, getUserMe);
 router.post('/', createUserController);
+router.delete('/:id', checkToken, deleteUserController);
 
 export default router;

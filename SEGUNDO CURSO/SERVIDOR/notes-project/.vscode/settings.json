@@ -12,7 +12,7 @@
 	"editor.fontLigatures": true,
 	"editor.fontFamily": "Jetbrains Mono",
 	"workbench.productIconTheme": "fluent-icons",
-	"window.zoomLevel": 1,
+	"window.zoomLevel": 2,
 	"explorer.confirmDragAndDrop": false,
 	"github.copilot.enable": {
 			"*": false,
