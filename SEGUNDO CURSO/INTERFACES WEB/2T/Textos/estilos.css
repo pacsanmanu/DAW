@@ -1,0 +1,42 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 40px;
+}
+
+.indentado {
+	text-indent: 50px;
+	font-family: 'Times New Roman', serif;
+	font-style: italic;
+}
+
+.centrado {
+	text-align: center;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+.subrayado {
+	text-decoration: underline;
+	letter-spacing: 3px;
+}
+
+.mayusculas {
+	word-spacing: 5px;
+	text-transform: uppercase;
+	line-height: 2;
+}
+
+.fantasia {
+	font-family: 'Comic Sans MS', cursive;
+	font-size: 24px;
+}
+
+.superior {
+	vertical-align: super;
+}
+
+.monospace {
+	font-size: 12px;
+	font-family: 'Courier New', monospace;
+	font-style: normal;
+}
