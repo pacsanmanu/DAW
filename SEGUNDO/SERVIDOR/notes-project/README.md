@@ -9,7 +9,10 @@ notes-project
 │  └─ report-task.txt
 ├─ .vscode
 │  └─ settings.json
+<<<<<<< HEAD
 ├─ Dockerfile
+=======
+>>>>>>> main
 ├─ README.md
 ├─ docker-compose.yml
 ├─ package-lock.json
