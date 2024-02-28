@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  nginx:
+    build: ./nginx
+    container_name: nginx_daw
+    ports:
+      - "8080:80"
+    networks:
+      - adaitsnetwork
+
+  api:
+    build: ./api
+    container_name: api_rest_daw
+    ports:
+      - "3000:3000"
+    networks:
+      - adaitsnetwork
+
+networks:
+  adaitsnetwork:
+    driver: bridge
