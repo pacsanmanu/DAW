@@ -1,0 +1,22 @@
+1. crear red de docker
+
+	docker network create "nombre de la red"
+	docker network ls
+	
+2. descargar imagen de mariaDB y wordpress
+
+	docker pull mariadb
+	docker pull wordpress
+	
+3. crear volumen
+	
+	docker volume create mariadb-wordpress
+	
+4. montar contenedores
+
+	docker run -d --name maria-wordpress-db --network mynetwork --mount
+	
+	docker run -d --name mariadb-wordpress-db --network mynetwork --mount source=mariadb-wordpress,target=/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=wordpress -e MYSQL_USER=manager -e MYSQL_PASSWORD=secret mariadb
+	
+	docker run -d --name wordpress --network mynetwork --mount type=bind,source="$(pwd)/target",target=/var/www/html -e WORDPRESS_DB_HOST=wordpress-db -e WORDPRESS_DB_USER=manager -e WORDPRESS_DB_PASSWORD=secret -p 8080:80 wordpress
+
